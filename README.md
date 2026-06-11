@@ -40,6 +40,9 @@ The system is divided into four operational phases: **Initialization → Data Pr
 <!-- Source: Slide 11 of the presentation -->
 > **[IMAGE NEEDED]** `images/methodology_diagram.png` — Methodology / architecture block diagram
 
+![image alt](https://github.com/joyontadebnath/Water-Quality-Monitoring-and-Automated-Fish-Feeder-System/blob/87aff5d93a407e934373e8091ce9356f6a66e133/images/methodology_diagram.png)
+
+
 ### Phase 1 – Initialization
 - Feeding schedule is set (user-configurable interval).
 - Safe thresholds for temperature and pH are defined in firmware.
