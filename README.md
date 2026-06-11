@@ -35,8 +35,6 @@ This project is an aquarium monitoring and automated fish feeding system built o
 
 The system is divided into four operational phases: **Initialization → Data Processing → Operation → Failsafe**.
 
-![image alt]([https://github.com/joyontadebnath/Water-Quality-Monitoring-and-Automated-Fish-Feeder-System/blob/87aff5d93a407e934373e8091ce9356f6a66e133/images/methodology_diagram.png](https://github.com/joyontadebnath/Water-Quality-Monitoring-and-Automated-Fish-Feeder-System/blob/ff33aee1f220c343e2a3631c102326babab767d8/images/methodology.png))
-
 ### Phase 1 – Initialization
 - Feeding schedule is set (user-configurable interval).
 - Safe thresholds for temperature and pH are defined in firmware.
