@@ -72,7 +72,7 @@ The system is divided into four operational phases: **Initialization → Data Pr
 - Safe thresholds for temperature and pH are defined in firmware.
 - DS18B20 and pH sensors are initialized and calibrated.
 - OLED display and servo motor are set up; servo is held at the stopped position (90°).
-- System connects to Wi-Fi and syncs local time from the NTP server (`pool.ntp.org`, GMT+6).
+- System connects to Wi-Fi and syncs local time from the NTP server.
 
 ### Phase 2 – Data Processing
 - pH sensor outputs a 12-bit ADC value → converted to voltage → mapped to pH scale (0–14) via a two-segment linear calibration equation.
@@ -85,38 +85,27 @@ The system is divided into four operational phases: **Initialization → Data Pr
 - When the current local time matches the programmed feeding minute, the servo rotates from 90° to 0° for **5 seconds** (releasing food), then returns to 90° (stopped).
 
 ### Phase 4 – Failsafe
-- The last feeding timestamp (hour, minute, second) and initialization flag are stored in flash using the ESP32 `Preferences` library.
+- The last feeding timestamp (hour, minute, second) and initialization flag are stored in flash.
 - On every loop iteration, the system checks whether the elapsed time since the last stored feeding exceeds the scheduled interval.
 - If a missed cycle is detected (e.g., after a reboot or power cut), the feeder activates immediately and a notification is sent to the user reporting the number of missed periods.
 
----
 
 ## Hardware
 
-### Components / Bill of Materials
+### Components
 
-| Component | Quantity | Price (BDT) |
-|---|---|---|
-| ESP32 Wi-Fi Module | 1 | 500 |
-| pH Sensor Module | 1 | 2,250 |
-| DS18B20 Temperature Sensor | 1 | 220 |
-| OLED Display (128×64, I2C) | 1 | 300 |
-| Breadboard | 1 | 150 |
-| Continuous Rotation Servo Motor | 1 | 350 |
-| Resistors & Wires | — | 100 |
-| 3D-Printed Feeder Parts | 1 set | 350 |
-| Plastic Aquarium Box (demo) | 1 | 450 |
-| Buffer Solutions (pH 4, 7, 10) | 1 set | 300 |
-| Sample Fish Food | — | 60 |
-| Miscellaneous | — | 300 |
-| **Total** | | **5,330** |
+| Component | Quantity |
+|---|---|
+| ESP32 Wi-Fi Module | 1 |
+| pH Sensor Module | 1 |
+| DS18B20 Temperature Sensor | 1 |
+| OLED Display (128×64, I2C) | 1 |
+| Breadboard | 1 | 
+| Continuous Rotation Servo Motor | 1 |
+| Resistors & Wires | — |
+| 3D-Printed Feeder Parts | 1 set |
 
-**Prototype cost (hardware only, excluding demo consumables): ৳4,220**
-**Estimated mass-production cost per unit (25% bulk discount + ৳150 overhead): ৳3,315**
-
----
-
-### Circuit Diagram
+### Circuit
 
 The system wiring is as follows:
 
@@ -160,8 +149,6 @@ The feeder attaches to a food container (e.g., a bottle) positioned above the aq
 <!-- Suggested filename: images/mechanical_feeder.png -->
 <!-- Source: Slide 17 (right photo) / Report Figure 9 -->
 > **[IMAGE NEEDED]** `images/mechanical_feeder.png` — Assembled mechanical feeder
-
-3D model files: [Thingiverse Thing:301532](https://www.thingiverse.com/thing:301532)
 
 ---
 
@@ -266,9 +253,6 @@ if (tempC > 33.0 || tempC < 28.0)
 char ssid[] = "YOUR_WIFI_SSID";
 char pass[] = "YOUR_WIFI_PASSWORD";
 ```
-
-> ⚠️ **Never commit real credentials to a public repository.** Use a `secrets.h` file (added to `.gitignore`) or environment variables.
-
 5. **Select board:** `ESP32 Dev Module` in Tools → Board.
 6. **Select port** and click **Upload**.
 7. Place the pH sensor and temperature sensor in the water. Connect a power source. The OLED will display `System Starting...` on boot, then begin showing live readings.
@@ -336,7 +320,7 @@ The DS18B20 was verified against a reference laboratory thermometer. Readings ma
 
 The failsafe is designed for environments with frequent power outages (common in Bangladesh). It works as follows:
 
-1. **Every feeding event**, the timestamp (hour, minute, second) is written to ESP32 flash using the `Preferences` library.
+1. **Every feeding event**, the timestamp (hour, minute, second) is written to ESP32 flash.
 2. On **every boot**, the stored timestamp is loaded back from flash.
 3. On **every loop iteration**, the elapsed time since the last stored feed is compared against the scheduled interval.
 4. If the elapsed time exceeds one interval, the system treats it as a **missed feeding**, immediately activates the feeder, and sends a Blynk notification: *"Missed a feeding cycle for N periods."*
@@ -369,41 +353,10 @@ This design means the system does **not** rely on an internal RTC or battery-bac
 
 ---
 
-## Future Work
-
-- **Closed-loop pH correction** — automatically dose an acid or base solution to bring pH back into range.
-- **Closed-loop temperature control** — trigger an aquarium heater or cooler based on measured temperature.
-- **Battery-backed RTC** — enable autonomous operation during extended Wi-Fi or power outages.
-- **Enhanced multi-cycle failsafe** — compensate for all missed feedings, not just one, after a prolonged blackout.
-
----
-
-## Cost Analysis
-
-### Prototype vs. Market Comparison
-
-| Product | Market Price (BDT) | Our System Cost (BDT) |
-|---|---|---|
-| Automated Fish Feeder (standalone) | ~2,333 | 1,450 (feeder portion only) |
-| pH Meter (standalone) | ~3,000+ | included in total |
-| **Combined equivalent** | **~5,333+** | **4,220 (prototype)** |
-
-Our prototype costs less than the combined price of the equivalent separate market products — and it adds features neither product offers individually, including remote monitoring, push notifications, and missed-feeding recovery.
-
----
-
 ## Team
 
-| Student ID | Name | Contribution |
-|---|---|---|
-| 2006051 | Ahamad Abtahi | Mechanical feeder design, servo mechanism, feeder initialization logic |
-| 2006052 | Md Nazmus Shakib Tushar | Blynk platform setup, pin assignment, live monitoring, mobile notifications |
-| 2006053 | Md. Maksudur Rahman Turzo | Sensor calibration, data handling, overall circuit design |
-| 2006054 | Joyonta Debnath | Failsafe mechanism, non-volatile memory handling, hardware structure |
+Ahamad Abtahi, Md Nazmus Shakib Tushar, Md. Maksudur Rahman Turzo and Joyonta Debnath
 
-**Course Instructors:** Md. Ehsanul Karim (Lecturer, EEE, BUET) · Akif Hamid (Lecturer PT, EEE, BUET)
-
----
 
 ## References
 
@@ -419,7 +372,6 @@ Our prototype costs less than the combined price of the equivalent separate mark
 
 6. Mechanical Fish Feeder 3D Model — [Thingiverse Thing:301532](https://www.thingiverse.com/thing:301532)
 
----
 
 ## 📂 Repository Structure
 
