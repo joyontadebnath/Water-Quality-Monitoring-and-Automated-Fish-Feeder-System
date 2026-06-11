@@ -54,8 +54,7 @@ This project is an aquarium monitoring and automated fish feeding system built o
 - 🕐 **Scheduled automated feeding** — time synchronized via NTP (GMT+6), no internal RTC required
 - 🔁 **Missed-feeding recovery** — detects and compensates for feedings missed during a power outage
 - 💾 **Non-volatile state persistence** — feeding schedule survives reboots with zero data loss
-- 🖥️ **Local OLED display** — shows current time, temperature, and pH on-device
-- ⚙️ **3D-printed mechanical feeder** — auger-based dispenser driven by a continuous-rotation servo
+
 
 ---
 
