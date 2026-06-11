@@ -5,14 +5,6 @@
 ![IoT](https://img.shields.io/badge/IoT-Blynk-green)
 ![Sensors](https://img.shields.io/badge/Sensors-DS18B20%20%7C%20pH-yellow)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
-![Course](https://img.shields.io/badge/Course-EEE%20416-red)
-![Institution](https://img.shields.io/badge/Institution-BUET-maroon)
-
-> **EEE 416 – Microprocessor & Embedded Systems Laboratory**
-> Bangladesh University of Engineering and Technology (BUET)
-> Department of Electrical and Electronic Engineering | January 2025 | Section A2, Group 05
-
----
 
 ## 📽️ Demo Video
 
