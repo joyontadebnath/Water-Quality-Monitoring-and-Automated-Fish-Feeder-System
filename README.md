@@ -12,33 +12,6 @@
 
 ---
 
-## 📋 Table of Contents
-
-- [Abstract](#abstract)
-- [Features](#features)
-- [System Overview](#system-overview)
-- [Hardware](#hardware)
-  - [Components](#components--bill-of-materials)
-  - [Circuit Diagram](#circuit-diagram)
-  - [Mechanical Feeder](#mechanical-feeder)
-  - [Hardware Build](#hardware-build)
-- [Firmware](#firmware)
-  - [Libraries](#libraries)
-  - [Pin Assignments](#pin-assignments)
-  - [How the Code Works](#how-the-code-works)
-  - [Setup & Flash Instructions](#setup--flash-instructions)
-- [Blynk App Integration](#blynk-app-integration)
-- [Sensor Calibration](#sensor-calibration)
-- [Failsafe Mechanism](#failsafe-mechanism)
-- [Results & Evaluation](#results--evaluation)
-- [Limitations](#limitations)
-- [Future Work](#future-work)
-- [Cost Analysis](#cost-analysis)
-- [Team](#team)
-- [References](#references)
-
----
-
 ## Abstract
 
 This project is an aquarium monitoring and automated fish feeding system built on the **ESP32 microcontroller**. It integrates a **DS18B20 temperature sensor** and an **analog pH sensor** to continuously monitor water quality. Readings are shown locally on an **OLED display** and transmitted to the user's smartphone in real time via the **Blynk IoT platform**. A **servo-controlled mechanical feeder** (fabricated from 3D-printed parts) dispenses a fixed quantity of food at scheduled intervals. The system features a **power-failure failsafe**: using non-volatile memory (ESP32 Preferences) and NTP-based time synchronization, it preserves the feeding schedule across reboots and automatically compensates for any feedings missed during a power outage. The result is a low-cost, integrated solution for maintaining healthy aquatic conditions in aquariums.
