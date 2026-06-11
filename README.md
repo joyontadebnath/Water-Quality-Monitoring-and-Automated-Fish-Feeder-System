@@ -35,13 +35,7 @@ This project is an aquarium monitoring and automated fish feeding system built o
 
 The system is divided into four operational phases: **Initialization → Data Processing → Operation → Failsafe**.
 
-<!-- 📌 IMAGE: Add the methodology block diagram here -->
-<!-- Suggested filename: images/methodology_diagram.png -->
-<!-- Source: Slide 11 of the presentation -->
-> **[IMAGE NEEDED]** `images/methodology_diagram.png` — Methodology / architecture block diagram
-
-![image alt](https://github.com/joyontadebnath/Water-Quality-Monitoring-and-Automated-Fish-Feeder-System/blob/87aff5d93a407e934373e8091ce9356f6a66e133/images/methodology_diagram.png)
-
+![image alt]([https://github.com/joyontadebnath/Water-Quality-Monitoring-and-Automated-Fish-Feeder-System/blob/87aff5d93a407e934373e8091ce9356f6a66e133/images/methodology_diagram.png](https://github.com/joyontadebnath/Water-Quality-Monitoring-and-Automated-Fish-Feeder-System/blob/ff33aee1f220c343e2a3631c102326babab767d8/images/methodology.png))
 
 ### Phase 1 – Initialization
 - Feeding schedule is set (user-configurable interval).
@@ -94,17 +88,11 @@ The system wiring is as follows:
 | OLED Display (SCL) | GPIO 22 |
 | Servo Motor (Signal) | GPIO 27 |
 
-<!-- 📌 IMAGE: Add the circuit schematic here -->
-<!-- Suggested filename: images/circuit_diagram.png -->
-<!-- Source: Slide 14 / Report Figure 2 -->
-> **[IMAGE NEEDED]** `images/circuit_diagram.png` — Schematic circuit diagram
 
-<!-- 📌 IMAGE: Add the practical breadboard circuit photo here -->
-<!-- Suggested filename: images/practical_circuit.png -->
-<!-- Source: Slide 19 / Report Figure 3 -->
-> **[IMAGE NEEDED]** `images/practical_circuit.png` — Practical circuit photo
+![image alt](https://github.com/joyontadebnath/Water-Quality-Monitoring-and-Automated-Fish-Feeder-System/blob/ff33aee1f220c343e2a3631c102326babab767d8/images/circuit_diagram.png)
 
----
+![image alt](https://github.com/joyontadebnath/Water-Quality-Monitoring-and-Automated-Fish-Feeder-System/blob/ff33aee1f220c343e2a3631c102326babab767d8/images/practical_circuit.png)
+
 
 ### Mechanical Feeder
 
@@ -116,29 +104,19 @@ The feeder is built from 3D-printed parts based on an open-source auger design. 
 
 The feeder attaches to a food container (e.g., a bottle) positioned above the aquarium. When the servo rotates, the auger pushes a fixed volume of food down the tube and into the water.
 
-<!-- 📌 IMAGE: Add 3D-printed parts photo here -->
-<!-- Suggested filename: images/feeder_3d_parts.png -->
-<!-- Source: Slide 17 (left photo) / Report Figure 8 -->
-> **[IMAGE NEEDED]** `images/feeder_3d_parts.png` — 3D-printed auger and holder parts
+![image alt](https://github.com/joyontadebnath/Water-Quality-Monitoring-and-Automated-Fish-Feeder-System/blob/ff33aee1f220c343e2a3631c102326babab767d8/images/feeder_3d_parts.png)
 
-<!-- 📌 IMAGE: Add assembled mechanical feeder photo here -->
-<!-- Suggested filename: images/mechanical_feeder.png -->
-<!-- Source: Slide 17 (right photo) / Report Figure 9 -->
-> **[IMAGE NEEDED]** `images/mechanical_feeder.png` — Assembled mechanical feeder
+![image alt](https://github.com/joyontadebnath/Water-Quality-Monitoring-and-Automated-Fish-Feeder-System/blob/ff33aee1f220c343e2a3631c102326babab767d8/images/mechanical_feeder.png)
 
 ---
 
 ### Hardware Build
 
-<!-- 📌 IMAGE: Add full hardware system photo here -->
-<!-- Suggested filename: images/hardware_overview.png -->
-<!-- Source: Slide 19 / Report Figure 4 — the labeled annotated photo -->
-> **[IMAGE NEEDED]** `images/hardware_overview.png` — Full hardware build (annotated)
 
-<!-- 📌 IMAGE: Add demo setup photo (feeder + aquarium box) here -->
-<!-- Suggested filename: images/demo_setup.png -->
-<!-- Source: Slide 20 -->
-> **[IMAGE NEEDED]** `images/demo_setup.png` — Demo setup with aquarium box
+![image alt](https://github.com/joyontadebnath/Water-Quality-Monitoring-and-Automated-Fish-Feeder-System/blob/ff33aee1f220c343e2a3631c102326babab767d8/images/hardware_overview.png)
+
+
+![image alt](https://github.com/joyontadebnath/Water-Quality-Monitoring-and-Automated-Fish-Feeder-System/blob/ff33aee1f220c343e2a3631c102326babab767d8/images/demo_setup.png)
 
 ---
 
@@ -246,20 +224,12 @@ The Blynk mobile app serves as the remote user interface. It provides:
   - `temp_limit` → Temperature out of 28–33 °C range
   - `feeding_time` → Missed feeding cycle detected and compensated
 
-<!-- 📌 IMAGE: Add Blynk mobile app screenshot here -->
-<!-- Suggested filename: images/blynk_ui.png -->
-<!-- Source: Slide 18 (right figure) / Report Figure 12 -->
-> **[IMAGE NEEDED]** `images/blynk_ui.png` — Blynk app dashboard (temperature + pH gauges)
 
-<!-- 📌 IMAGE: Add the missed-feeding notification screenshot here -->
-<!-- Suggested filename: images/blynk_notification.png -->
-<!-- Source: Slide 18 (left figure) / Report Figure 13 -->
-> **[IMAGE NEEDED]** `images/blynk_notification.png` — Blynk push notification for missed feeding
+![image alt](https://github.com/joyontadebnath/Water-Quality-Monitoring-and-Automated-Fish-Feeder-System/blob/ff33aee1f220c343e2a3631c102326babab767d8/images/blynk_ui.png)
 
-<!-- 📌 IMAGE: Add OLED live output photo here -->
-<!-- Suggested filename: images/oled_output.png -->
-<!-- Source: Report Figure 11 -->
-> **[IMAGE NEEDED]** `images/oled_output.png` — OLED display showing live temperature and pH
+![image alt](https://github.com/joyontadebnath/Water-Quality-Monitoring-and-Automated-Fish-Feeder-System/blob/ff33aee1f220c343e2a3631c102326babab767d8/images/blynk_notifications.jpg)
+
+![image alt](https://github.com/joyontadebnath/Water-Quality-Monitoring-and-Automated-Fish-Feeder-System/blob/ff33aee1f220c343e2a3631c102326babab767d8/images/oled_output.png)
 
 ---
 
@@ -269,15 +239,10 @@ The Blynk mobile app serves as the remote user interface. It provides:
 
 The pH sensor was calibrated using **standard buffer solutions** at pH 4.01, 6.86, and 9.18 (at 25 °C). For each known pH solution, the output voltage was measured. A piecewise linear equation was then fitted to map voltage → pH. The calibration curve was split at 2.555 V to improve accuracy across the full range.
 
-<!-- 📌 IMAGE: Add buffer solution photo here -->
-<!-- Suggested filename: images/ph_buffer_solutions.png -->
-<!-- Source: Slide 15 (left photo) -->
-> **[IMAGE NEEDED]** `images/ph_buffer_solutions.png` — pH 4, 6.86, and 9.18 buffer solutions used for calibration
 
-<!-- 📌 IMAGE: Add voltage-pH calibration graph here -->
-<!-- Suggested filename: images/ph_calibration_curve.png -->
-<!-- Source: Slide 15 (right graph) / Report Figure 6 -->
-> **[IMAGE NEEDED]** `images/ph_calibration_curve.png` — Voltage vs pH calibration curve
+![image alt](https://github.com/joyontadebnath/Water-Quality-Monitoring-and-Automated-Fish-Feeder-System/blob/ff33aee1f220c343e2a3631c102326babab767d8/images/ph_buffer_solutions.png)
+
+![image alt](https://github.com/joyontadebnath/Water-Quality-Monitoring-and-Automated-Fish-Feeder-System/blob/ff33aee1f220c343e2a3631c102326babab767d8/images/ph_calibration_curve.png)
 
 After calibration, measured pH values were approximately **2–3% off** from reference values. A 20-sample moving average filter is applied in firmware to further reduce noise.
 
@@ -347,28 +312,6 @@ Ahamad Abtahi, Md Nazmus Shakib Tushar, Md. Maksudur Rahman Turzo and Joyonta De
 5. Lee, P.G. A Review of Automated Control Systems for Aquaculture and Design Criteria for Their Implementation. *Aquac. Eng.* 1995, 14, 205–227.
 
 6. Mechanical Fish Feeder 3D Model — [Thingiverse Thing:301532](https://www.thingiverse.com/thing:301532)
-
-
-## 📂 Repository Structure
-
-```
-/
-├── Final_Project_2.ino      # ESP32 firmware (Arduino)
-├── README.md                # This file
-└── images/                  # Project images (see below)
-    ├── methodology_diagram.png
-    ├── circuit_diagram.png
-    ├── practical_circuit.png
-    ├── hardware_overview.png
-    ├── demo_setup.png
-    ├── feeder_3d_parts.png
-    ├── mechanical_feeder.png
-    ├── ph_buffer_solutions.png
-    ├── ph_calibration_curve.png
-    ├── blynk_ui.png
-    ├── blynk_notification.png
-    └── oled_output.png
-```
 
 ---
 
